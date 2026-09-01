@@ -8391,6 +8391,7 @@
 #include "modular_vcg\modules\looc\code\looc_preference.dm"
 #include "modular_vcg\modules\memorystats\code\memorystats.dm"
 #include "modular_vcg\modules\monke_cross_db\code\dbcore.dm"
+#include "modular_vcg\modules\npc\code\protester.dm"
 #include "modular_vcg\modules\ooc_pronouns\code\ooc.dm"
 #include "modular_vcg\modules\plexora\code\_plexora.dm"
 #include "modular_vcg\modules\plexora\code\config.dm"

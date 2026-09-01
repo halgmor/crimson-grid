@@ -53,5 +53,8 @@ SUBSYSTEM_DEF(humannpcpool)
 			/mob/living/carbon/human/npc/walkby, \
 			/mob/living/carbon/human/npc/business \
 		)
+		if(prob(3)) // CRIMSON EDIT ADD START - Endron Protest
+			creating_npc = /mob/living/carbon/human/npc/protester
+		// CRIMSON EDIT ADD END - Endron Protest
 		new creating_npc(get_turf(chosen_spawn_point))
 #endif
