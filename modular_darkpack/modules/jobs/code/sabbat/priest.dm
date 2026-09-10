@@ -122,6 +122,11 @@
 			if(name != "Pack Credo")
 				ritae_options += name
 
+	// CRIMSON EDIT ADD START - Sabbat Goals
+	if(GLOB.sabbat_team?.can_call_path_rite(user))
+		ritae_options += "Auctoritas of the Path"
+	// CRIMSON EDIT ADD END - Sabbat Goals
+
 	var/choice = tgui_input_list(user, "Select a Rite to learn about:", "Sabbat Ritae", ritae_options)
 	if(!choice)
 		return
@@ -136,6 +141,12 @@
 			credo.desc = new_credo
 			to_chat(user, span_cult("You update your pack's interpretation of the Sabbat Credo."))
 		return
+
+	// CRIMSON EDIT ADD START - Sabbat Goals
+	if(choice == "Auctoritas of the Path")
+		GLOB.sabbat_team?.start_path_rite(user)
+		return
+	// CRIMSON EDIT ADD END - Sabbat Goals
 
 	var/datum/sabbat_ritae/ritae_description/ritus = ritae_datums[choice]
 	if(ritus)

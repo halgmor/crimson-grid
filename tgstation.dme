@@ -8402,6 +8402,7 @@
 #include "modular_vcg\modules\jobs\code\police\fbi.dm"
 #include "modular_vcg\modules\jobs\code\police\sergeant.dm"
 #include "modular_vcg\modules\jobs\code\sabbat\pack.dm"
+#include "modular_vcg\modules\jobs\code\sabbat\sabbat_goals.dm"
 #include "modular_vcg\modules\jobs\code\supply\dealer.dm"
 #include "modular_vcg\modules\jobs\code\triads\blue_lanterns.dm"
 #include "modular_vcg\modules\jobs\code\triads\deputy_mountain_master.dm"
