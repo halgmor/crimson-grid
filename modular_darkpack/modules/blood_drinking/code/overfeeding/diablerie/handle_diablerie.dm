@@ -35,6 +35,7 @@
 					var/datum/brain_trauma/special/imaginary_friend/diablerie/trauma = gain_trauma(/datum/brain_trauma/special/imaginary_friend/diablerie)
 					trauma.friend.key = victim.key
 
+			GLOB.sabbat_team?.register_diablerie(src, victim) // CRIMSON EDIT ADD - Sabbat Goals
 			make_diablerist()
 			adjust_brute_loss(-50, TRUE)
 			adjust_fire_loss(-50, TRUE)
