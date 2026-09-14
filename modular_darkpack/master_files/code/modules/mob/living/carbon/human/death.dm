@@ -5,6 +5,10 @@
 
 	SEND_SIGNAL(SSdcs, COMSIG_GLOB_REPORT_CRIME, CRIME_MURDER, get_turf(src))
 	GLOB.masquerade_breakers_list -= src
+	// CRIMSON EDIT ADD START - Leopold-veil-4-change
+	GLOB.veil_breakers_list -= src
+	GLOB.supernatural_breakers_list -= src
+	// CRIMSON EDIT ADD END - Leopold-veil-4-change
 	GLOB.sabbatites -= src
 
 	last_death_info = new()
