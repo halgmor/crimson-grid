@@ -74,7 +74,15 @@
 	. = ..()
 	var/turf/current_location = get_turf(user)
 	to_chat(user, span_info("[span_bold("YOU")], [get_area_name(user)] X:[current_location.x] Y:[current_location.y] Z:[current_location.z]"))
+	// CRIMSON EDIT ADD START - Leopold-veil-4-change
+	var/found_anyone = FALSE
+	// CRIMSON EDIT ADD END - Leopold-veil-4-change
 	for(var/mob/living/breacher in GLOB.supernatural_breakers_list)
+		// CRIMSON EDIT ADD START - Leopold-veil-4-change
+		if(breacher.masquerade_score > 3)
+			continue
+		found_anyone = TRUE
+		// CRIMSON EDIT ADD END - Leopold-veil-4-change
 		var/location_info
 		var/turf/turf = get_turf(breacher)
 		if(breacher.masquerade_score <= 2)
@@ -83,7 +91,7 @@
 			location_info = "[get_area_name(turf)]"
 		to_chat(user, span_info("[breacher.real_name], Veil: [breacher.masquerade_score], [location_info]"))
 
-	if(!GLOB.supernatural_breakers_list)
+	if(!found_anyone) // CRIMSON EDIT - Leopold-veil-4-change - Original: if(!GLOB.supernatural_breakers_list)
 		to_chat(user, span_info("No available freaks of nature in city..."))
 
 // CRIMSON EDIT ADD START - Sell Valuables
