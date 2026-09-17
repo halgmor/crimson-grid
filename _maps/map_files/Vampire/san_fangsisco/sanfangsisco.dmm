@@ -599,10 +599,6 @@
 	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/millennium_tower/ventrue)
-"ahC" = (
-/obj/machinery/light/small/red/dim/directional/south,
-/turf/open/floor/carpet/green,
-/area/vtm/interior/giovanni/basement)
 "ahE" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
@@ -2340,10 +2336,6 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/outside/financialdistrict)
-"aDh" = (
-/obj/machinery/light/small/red/directional/east,
-/turf/open/floor/carpet/darkpack/purplegold,
-/area/vtm/interior/giovanni/basement)
 "aDk" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/wood/smooth/old,
@@ -5545,7 +5537,7 @@
 /area/vtm/interior/endron_facility/restricted)
 "bsX" = (
 /obj/machinery/light/small/red/dim/directional/west,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "bsY" = (
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
@@ -6216,7 +6208,7 @@
 "bAV" = (
 /obj/machinery/light/small/red/dim/directional/east,
 /obj/machinery/light/small/red/directional/east,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "bAY" = (
 /obj/structure/table/wood,
@@ -6355,6 +6347,9 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/sewer/nosferatu_town)
 "bCy" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/giovanni/basement)
 "bCA" = (
@@ -6698,8 +6693,8 @@
 /area/vtm/interior/sewer/nosferatu_town)
 "bHI" = (
 /obj/structure/bed/maint,
-/obj/machinery/light/small/red/dim/directional/east,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "bHM" = (
@@ -11421,7 +11416,16 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/mansion)
 "cPO" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/giovanni/basement)
 "cPV" = (
@@ -11706,6 +11710,13 @@
 /obj/effect/landmark/start/darkpack/hecata/capo,
 /turf/open/floor/carpet/green,
 /area/vtm/interior/bianchiBank)
+"cUm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/dark,
+/area/vtm/interior/giovanni/basement)
 "cUv" = (
 /obj/structure/railing{
 	pixel_y = -1
@@ -12440,10 +12451,6 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/carpet,
 /area/vtm/interior/cog/pantry)
-"dfj" = (
-/obj/machinery/light/small/red/dim/directional/west,
-/turf/open/floor/carpet/green,
-/area/vtm/interior/giovanni/basement)
 "dfp" = (
 /obj/effect/decal/pallet,
 /obj/structure/table/wood,
@@ -13154,7 +13161,10 @@
 /area/vtm/interior/church)
 "doN" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/black,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/wood/dark,
 /area/vtm/interior/giovanni/basement)
 "doP" = (
 /obj/effect/decal/wallpaper/red/low,
@@ -13367,6 +13377,13 @@
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/city/plating_mono,
 /area/vtm/interior/clinic)
+"drA" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/interior/giovanni/basement)
 "drB" = (
 /obj/structure/table/wood,
 /obj/vampire_computer,
@@ -16783,6 +16800,7 @@
 /obj/structure/vampstatue,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/red/directional/east,
 /turf/open/floor/carpet/darkpack/purplegold,
 /area/vtm/interior/giovanni/basement)
 "ekV" = (
@@ -18706,6 +18724,13 @@
 /area/vtm/graveyard)
 "eLq" = (
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/giovanni/basement)
 "eLs" = (
@@ -20658,6 +20683,13 @@
 /obj/effect/landmark/npcbeacon,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/outside/ghetto)
+"flp" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/machinery/light/small/red/directional/west,
+/turf/open/floor/carpet/green,
+/area/vtm/interior/giovanni/basement)
 "flq" = (
 /obj/structure/vampdoor/glass{
 	dir = 4;
@@ -23612,6 +23644,9 @@
 "fWa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/jukebox,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
 /turf/open/floor/wood/dark,
 /area/vtm/interior/giovanni/basement)
 "fWf" = (
@@ -26350,6 +26385,15 @@
 /obj/effect/landmark/start/darkpack/hospital/clinic_guard,
 /turf/open/floor/city/clinic,
 /area/vtm/interior/clinic)
+"gGB" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/interior/giovanni/basement)
 "gGP" = (
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -26451,50 +26495,6 @@
 /area/vtm/interior/bianchiBank)
 "gHF" = (
 /obj/structure/table/wood/billiard,
-/obj/item/pool_ball/random{
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/obj/item/pool_ball/random{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/pool_ball/random{
-	pixel_x = 4;
-	pixel_y = 7
-	},
-/obj/item/pool_ball/random{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/pool_ball/random{
-	pixel_x = 0;
-	pixel_y = 7
-	},
-/obj/item/pool_ball/random{
-	pixel_x = -6;
-	pixel_y = 10
-	},
-/obj/item/pool_ball/random{
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/obj/item/pool_ball/random{
-	pixel_x = 6;
-	pixel_y = 10
-	},
-/obj/item/pool_ball/random{
-	pixel_x = 2;
-	pixel_y = 10
-	},
-/obj/item/pool_ball/random{
-	pixel_x = -2;
-	pixel_y = 10
-	},
-/obj/item/pool_cue{
-	pixel_x = -8;
-	pixel_y = -14
-	},
 /turf/open/floor/carpet/green,
 /area/vtm/interior/giovanni/basement)
 "gHP" = (
@@ -28185,6 +28185,10 @@
 	},
 /turf/open/floor/carpet,
 /area/vtm/interior/bianchiBank)
+"hdI" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/giovanni/basement)
 "hdM" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -29451,10 +29455,6 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
-"huz" = (
-/obj/structure/fluff/tv/news,
-/turf/closed/wall/vampwall/rock,
-/area/vtm/interior/giovanni/basement)
 "huA" = (
 /obj/machinery/light/directional/west,
 /obj/structure/rack/clothing/rand{
@@ -30725,10 +30725,8 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/supply)
 "hLX" = (
-/obj/machinery/light/small/red/dim/directional/south,
-/obj/item/pool_ball{
-	pixel_x = 0;
-	pixel_y = 20
+/obj/machinery/light/small/red/dim/directional/south{
+	invisibility = 100
 	},
 /turf/open/floor/carpet/green,
 /area/vtm/interior/giovanni/basement)
@@ -31787,6 +31785,13 @@
 "iam" = (
 /obj/machinery/light/prince/directional/north{
 	invisibility = 100
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/giovanni/basement)
@@ -35804,7 +35809,7 @@
 /area/vtm/interior/millennium_tower/ventrue)
 "jeG" = (
 /obj/fusebox,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "jeH" = (
 /obj/structure/vampdoor/woodglass{
@@ -38046,8 +38051,11 @@
 /turf/open/floor/carpet/darkpack/old,
 /area/vtm/interior/bianchiBank)
 "jIi" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/wood/dark,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/turf/open/floor/carpet/green,
 /area/vtm/interior/giovanni/basement)
 "jIl" = (
 /obj/effect/turf_decal/siding/white{
@@ -40168,10 +40176,6 @@
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/cog/caern)
-"kmt" = (
-/obj/machinery/light/small/red/directional/west,
-/turf/open/floor/carpet/darkpack/purplegold,
-/area/vtm/interior/giovanni/basement)
 "kmv" = (
 /obj/structure/curtain/bounty,
 /obj/structure/platform/lowwall/rich/window,
@@ -41743,7 +41747,7 @@
 /area/vtm/interior/techshop)
 "kIG" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "kIJ" = (
 /mob/living/carbon/human/npc/bubway,
@@ -43402,7 +43406,7 @@
 /area/vtm/outside/ghetto)
 "lcf" = (
 /obj/machinery/light/small/red/directional/west,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "lcg" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -44122,6 +44126,12 @@
 /obj/structure/platform/lowwall/market/window,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/shop/hardware_store)
+"lmC" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/carpet/green,
+/area/vtm/interior/giovanni/basement)
 "lmH" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 4
@@ -44374,11 +44384,42 @@
 /obj/machinery/light/prince/directional/north{
 	invisibility = 100
 	},
-/obj/item/grown/log,
-/obj/item/grown/log,
-/obj/item/grown/log,
-/obj/item/grown/log,
-/obj/item/grown/log,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/giovanni/basement)
 "lpM" = (
@@ -44762,6 +44803,15 @@
 /obj/structure/platform/lowwall/old/window,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/chantry)
+"lvI" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/interior/giovanni/basement)
 "lvK" = (
 /obj/structure/sink/directional/south,
 /obj/structure/mirror{
@@ -48386,12 +48436,6 @@
 /obj/structure/roofstuff/alt1,
 /turf/open/floor/plating/roofwalk,
 /area/vtm/outside/pacificheights/forest)
-"mub" = (
-/obj/effect/decal/cleanable/litter,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/green,
-/area/vtm/interior/giovanni/basement)
 "muc" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/old,
@@ -52411,6 +52455,12 @@
 /obj/structure/platform/lowwall/brick,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/cog/pantry)
+"ntQ" = (
+/obj/machinery/light/small/red/directional/west,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/boozeomat,
+/turf/open/floor/wood/dark,
+/area/vtm/interior/giovanni/basement)
 "ntV" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 8;
@@ -54006,7 +54056,7 @@
 /area/vtm/interior/shop/gunshop)
 "nOu" = (
 /obj/machinery/light/small/red/directional/east,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "nOv" = (
 /obj/machinery/door/poddoor{
@@ -55317,6 +55367,19 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/city/plating_mono,
 /area/vtm/interior/clinic/haven)
+"ofY" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/interior/giovanni/basement)
 "oga" = (
 /obj/structure/table/wood/fancy/red,
 /turf/open/floor/plating/granite,
@@ -56616,6 +56679,23 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/outside/chinatown)
+"owE" = (
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/turf/open/floor/carpet/darkpack/old,
+/area/vtm/interior/giovanni/basement)
 "owH" = (
 /obj/structure/table/glass,
 /obj/vampire_computer,
@@ -59245,9 +59325,9 @@
 /area/vtm/interior/supply)
 "pdR" = (
 /obj/structure/table,
-/obj/machinery/light/small/red/dim/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "pdY" = (
@@ -59568,6 +59648,22 @@
 	},
 /turf/open/water/vamp_sewer,
 /area/vtm/interior/sewer/nosferatu_town)
+"pix" = (
+/obj/structure/coclock,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/interior/giovanni)
 "piz" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/sidewalk/poor,
@@ -60598,6 +60694,7 @@
 /area/vtm/interior)
 "pwf" = (
 /obj/structure/fireplace,
+/obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/giovanni/basement)
 "pwn" = (
@@ -66598,6 +66695,22 @@
 /obj/effect/turf_decal/siding/white/corner,
 /turf/open/floor/city/plating,
 /area/vtm/interior/techshop)
+"qVh" = (
+/obj/machinery/light/small/directional/east,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
+	},
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/interior/giovanni/basement)
 "qVl" = (
 /obj/structure/vampdoor/simple{
 	dir = 4
@@ -68086,7 +68199,7 @@
 /area/vtm/outside/pacificheights/old)
 "roG" = (
 /obj/machinery/light/small/red/dim/directional/north,
-/turf/open/floor/carpet/darkpack/old,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/giovanni/basement)
 "roM" = (
 /obj/effect/turf_decal/siding/wood{
@@ -72217,6 +72330,10 @@
 /obj/structure/filingcabinet/chestdrawer/wheeled,
 /turf/open/floor/wood/smooth,
 /area/vtm/interior/millennium_tower)
+"spY" = (
+/obj/structure/fluff/tv/news,
+/turf/closed/wall/vampwall/rock,
+/area/vtm)
 "sqa" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/wood/smooth/old,
@@ -73855,6 +73972,17 @@
 	},
 /turf/open/floor/carpet/green,
 /area/vtm/interior/millennium_tower/ventrue)
+"sLc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/dark,
+/area/vtm/interior/giovanni/basement)
 "sLk" = (
 /obj/structure/vampdoor/old{
 	dir = 4
@@ -74101,6 +74229,24 @@
 /obj/structure/fluff/tv/order/four,
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop/bacotell)
+"sPA" = (
+/obj/machinery/light/small/red/directional/west,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/carpet/black,
+/area/vtm/interior/giovanni/basement)
 "sPH" = (
 /obj/darkpack_car/track/volkswagen,
 /turf/open/floor/plating/sidewalk,
@@ -74208,6 +74354,11 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/small,
 /area/vtm/interior/endron_facility/restricted)
+"sRW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/carpet/green,
+/area/vtm/interior/giovanni/basement)
 "sRZ" = (
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/sidewalkalt,
@@ -75838,11 +75989,6 @@
 /obj/structure/table,
 /turf/open/floor/wood/old,
 /area/vtm/interior/shop/clothing_store)
-"tnF" = (
-/obj/machinery/light/small/directional/east,
-/obj/structure/bookcase/random/kindred,
-/turf/open/floor/carpet/green,
-/area/vtm/interior/giovanni/basement)
 "tnI" = (
 /obj/structure/vampipe{
 	icon_state = "piping35"
@@ -75882,6 +76028,11 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/seven,
 /turf/open/floor/wood/smooth,
 /area/vtm/interior)
+"tof" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bookcase/random/kindred,
+/turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/interior/giovanni/basement)
 "tok" = (
 /obj/structure/table,
 /obj/item/screwdriver,
@@ -77050,6 +77201,13 @@
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/millennium_tower)
+"tDC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/wood/dark,
+/area/vtm/interior/giovanni/basement)
 "tDE" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -77425,11 +77583,6 @@
 	},
 /turf/open/floor/carpet/purple,
 /area/vtm/interior/clinic)
-"tIT" = (
-/obj/machinery/light/small/red/dim/directional/west,
-/obj/machinery/light/small/red/dim/directional/south,
-/turf/open/floor/carpet/green,
-/area/vtm/interior/giovanni/basement)
 "tIV" = (
 /obj/effect/decal/cleanable/litter,
 /obj/effect/decal/cleanable/cardboard,
@@ -77546,6 +77699,7 @@
 /obj/structure/vampstatue,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/red/directional/west,
 /turf/open/floor/carpet/darkpack/purplegold,
 /area/vtm/interior/giovanni/basement)
 "tKk" = (
@@ -78028,8 +78182,8 @@
 /turf/open/floor/city/church,
 /area/vtm/interior/oldchurch)
 "tRR" = (
-/obj/machinery/light/small/red/dim/directional/east,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/red/directional/east,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "tRV" = (
@@ -81079,8 +81233,14 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/mansion)
 "uGE" = (
-/obj/machinery/light/small/red/directional/west,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
 /turf/open/floor/wood/dark,
 /area/vtm/interior/giovanni/basement)
 "uGF" = (
@@ -81432,8 +81592,13 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/chantry/basement)
 "uLo" = (
-/obj/machinery/light/small/red/directional/west,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
 /turf/open/floor/carpet/black,
 /area/vtm/interior/giovanni/basement)
 "uLt" = (
@@ -83627,6 +83792,18 @@
 	},
 /turf/open/floor/city/toilet,
 /area/vtm/interior/bianchiBank)
+"vov" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/wood/dark,
+/area/vtm/interior/giovanni/basement)
 "vox" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
@@ -88943,15 +89120,6 @@
 /obj/effect/turf_decal/stripes/red/full,
 /turf/open/floor/city/plating,
 /area/vtm/interior/millennium_tower/f4)
-"wKB" = (
-/obj/machinery/light/prince/directional/north,
-/obj/item/grown/log,
-/obj/item/grown/log,
-/obj/item/grown/log,
-/obj/item/grown/log,
-/obj/item/grown/log,
-/turf/open/floor/carpet/darkpack/old,
-/area/vtm/interior/giovanni)
 "wKD" = (
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/concrete,
@@ -90241,6 +90409,11 @@
 "xav" = (
 /turf/closed/wall/vampwall/bar,
 /area/vtm/interior/sewer)
+"xaw" = (
+/obj/machinery/light/small/directional/south,
+/obj/effect/turf_decal/siding/wood,
+/turf/open/floor/wood/dark,
+/area/vtm/interior/giovanni/basement)
 "xaF" = (
 /obj/structure/chair,
 /turf/open/floor/city/plating_mono,
@@ -90443,6 +90616,16 @@
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower/ventrue)
+"xcC" = (
+/obj/effect/mapping_helpers/door/access/giovanni,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/six,
+/obj/effect/mapping_helpers/door/bash_difficulty/six,
+/obj/structure/vampdoor/simple{
+	dir = 8
+	},
+/turf/open/floor/carpet/darkpack/old,
+/area/vtm/interior/giovanni/basement)
 "xcJ" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -91675,7 +91858,7 @@
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/interior/giovanni/basement)
 "xrJ" = (
-/obj/machinery/light/small/red/dim/directional/south,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "xrP" = (
@@ -91683,6 +91866,11 @@
 /obj/effect/decal/cleanable/cardboard,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/sewer)
+"xrQ" = (
+/obj/structure/bookcase/random/kindred,
+/obj/structure/bookcase/random/kindred,
+/turf/open/floor/carpet/green,
+/area/vtm/interior/giovanni/basement)
 "xrT" = (
 /obj/structure/closet/crate/bin,
 /obj/item/trash/sosjerky,
@@ -92712,10 +92900,6 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/oldchurch)
-"xGB" = (
-/obj/machinery/vending/boozeomat,
-/turf/open/floor/wood/dark,
-/area/vtm/interior/giovanni/basement)
 "xGI" = (
 /obj/structure/mirror{
 	pixel_y = 32
@@ -103800,10 +103984,10 @@ dvN
 dvN
 dvN
 dvN
+oUo
+sPA
 lWX
-lWX
-lWX
-lWX
+ntQ
 lWX
 dvN
 dvN
@@ -104057,7 +104241,7 @@ dvN
 dvN
 dvN
 dvN
-oUo
+qGQ
 uLo
 fWa
 uGE
@@ -104313,13 +104497,13 @@ dvN
 dvN
 dvN
 dvN
-dvN
-qGQ
+spY
+vov
 doN
 uIC
-uIC
-uIC
-uIC
+cUm
+tDC
+sLc
 lWX
 dvN
 dvN
@@ -104570,13 +104754,13 @@ dvN
 dvN
 dvN
 dvN
-huz
-xGB
-uIC
-uIC
-uIC
-uIC
-uIC
+mHl
+cYQ
+thQ
+thQ
+thQ
+thQ
+xaw
 lWX
 dvN
 mHl
@@ -104827,15 +105011,15 @@ lWX
 lWX
 lWX
 lWX
-lWX
-cYQ
-thQ
-thQ
-thQ
-thQ
+xZH
+eIR
+eIR
+mMf
+lkh
+mMf
 jIi
-lWX
-lWX
+flp
+lmC
 mHl
 xrG
 aiG
@@ -105081,18 +105265,18 @@ dvN
 dvN
 lWX
 ohV
-pie
+sRW
 pie
 pie
 xZH
-eIR
-eIR
-mMf
-lkh
-mMf
-pie
-dfj
-tIT
+mnw
+mnw
+mnw
+mnw
+mnw
+mnw
+lWX
+mnw
 mHl
 shx
 aiG
@@ -105342,13 +105526,13 @@ tdO
 xZH
 pie
 xZH
-mnw
-mnw
-mnw
-mnw
-mnw
-mnw
-mnw
+xZH
+lWX
+lWX
+xZH
+xrQ
+xrQ
+xZH
 mnw
 mHl
 igQ
@@ -105598,15 +105782,15 @@ yku
 muB
 rEY
 pie
+pie
+pie
+pie
+mnw
+mnw
+mnw
+mnw
 xZH
 mnw
-mnw
-mnw
-mnw
-mnw
-mnw
-mnw
-ahC
 mHl
 mHl
 mHl
@@ -105867,10 +106051,10 @@ mnw
 btH
 mdV
 bsX
-isO
+rhf
 wCj
 wCj
-isO
+rhf
 lcf
 mHl
 mHl
@@ -106111,12 +106295,12 @@ lWX
 lWX
 lWX
 rEY
-mub
 xZH
-mnw
 xZH
-mnw
 xZH
+xZH
+xZH
+mHl
 mnw
 gHF
 hLX
@@ -106125,13 +106309,13 @@ vew
 mHl
 jeG
 kIG
-isO
-isO
-isO
-isO
+rhf
+rhf
+rhf
+rhf
 ccD
 rhf
-rhf
+hdI
 rhf
 mHl
 cVX
@@ -106368,10 +106552,10 @@ lWX
 dvN
 lWX
 lWX
-cPO
-cPO
-bCy
-cPO
+ofY
+gGB
+gGB
+gGB
 cPO
 dKb
 mnw
@@ -106381,11 +106565,11 @@ mnw
 yae
 mHl
 roG
-isO
-isO
-isO
-isO
-isO
+rhf
+rhf
+rhf
+rhf
+rhf
 mHl
 rhf
 rhf
@@ -106630,18 +106814,18 @@ rDo
 xIA
 lVe
 bCy
-pie
-mnw
+tof
+xZH
 mnw
 mnw
 mnw
 nZt
 mdV
 bAV
-isO
+rhf
 vGp
 obD
-isO
+rhf
 nOu
 mHl
 mRd
@@ -106887,7 +107071,7 @@ vqX
 qcB
 oMm
 bCy
-tnF
+iRY
 mnw
 mnw
 mnw
@@ -107143,15 +107327,15 @@ lpA
 yar
 oMm
 cHG
-bCy
+drA
 mHl
 lWX
-fnr
+xcC
 mHl
 mHl
 mHl
 tKc
-kmt
+nIO
 nIO
 mHl
 aUY
@@ -107396,16 +107580,16 @@ dvN
 dvN
 lWX
 ohV
-iRY
-bCy
-bCy
-bCy
+qVh
+lvI
+lvI
+lvI
 eLq
 lWX
 sVN
 agn
 isO
-isO
+owE
 mHl
 buT
 nIO
@@ -107654,9 +107838,9 @@ dvN
 dvN
 dvN
 lWX
-lWX
-rEY
-rEY
+xZH
+xZH
+xZH
 lWX
 lWX
 psr
@@ -107665,7 +107849,7 @@ isO
 isO
 mHl
 ekU
-aDh
+nIO
 nIO
 mHl
 fPQ
@@ -170879,7 +171063,7 @@ utD
 bXb
 waY
 gcL
-wKB
+vqO
 nEv
 fvE
 fvE
@@ -171136,7 +171320,7 @@ utD
 bXb
 qFT
 gcL
-jvL
+pix
 hlf
 nBx
 hlf
@@ -174480,7 +174664,7 @@ atu
 atu
 sba
 atu
-atu
+sba
 atu
 atu
 atu
