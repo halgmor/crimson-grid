@@ -173,8 +173,15 @@
     height: 32px;
     image-rendering: pixelated;
     filter: drop-shadow(1px 1px 1px black);
+    transform: scale(1.8); // CRIMSON EDIT ADD - Slot machine
   }
 }
+
+// CRIMSON EDIT ADD START - Slot machine
+.SlotMachine__Symbol--winning {
+  animation: SlotMachine__Winning 0.4s step-end infinite;
+}
+// CRIMSON EDIT ADD END - Slot machine
 
 @keyframes SlotMachine__Spin {
   0% {

@@ -19,11 +19,16 @@ type Data = {
   paymode: number;
   jackpot_id: string;
   trap_id: string;
+  winning_line: number[]; // CRIMSON EDIT ADD - Slot machine
+  winning_length: number; // CRIMSON EDIT ADD - Slot machine
+  prizes: number[]; // CRIMSON EDIT ADD - Slot machine
 };
 
 type SlotSymbol = {
   id: string;
   icon_id: string;
+  scale?: number; // CRIMSON EDIT ADD - Slot machine
+  offset?: number; // CRIMSON EDIT ADD - Slot machine
 };
 
 type Reel = {
@@ -63,7 +68,9 @@ export const SlotMachine = () => {
   const trapSymbol = data.trap_id ? symbolsById[data.trap_id] : null;
 
   return (
-    <Window width={300} height={445}>
+    <Window width={300} height={525}>
+      {' '}
+      {/* CRIMSON EDIT CHANGE - Slot machine - ORIGINAL: height={445} */}
       <Window.Content>
         <Banner />
         <Section>
@@ -75,6 +82,11 @@ export const SlotMachine = () => {
                   symbolsById={symbolsById}
                   symbolsNeeded={reel.symbols}
                   spinning={spinning}
+                  // CRIMSON EDIT ADD START - Slot machine
+                  reelNumber={i + 1}
+                  winningLine={data.winning_line}
+                  winningLength={data.winning ? data.winning_length : 0}
+                  // CRIMSON EDIT ADD END - Slot machine
                 />
               </div>
             ))}
@@ -83,9 +95,22 @@ export const SlotMachine = () => {
         <Stack vertical fill>
           <Stack.Item>
             <Section fill align={'center'}>
-              <Box inline textAlign={'center'} color="good" bold>
-                Jackpot:
+              {/* CRIMSON EDIT CHANGE START - Slot machine - ORIGINAL: <Box inline textAlign={'center'} color="good" bold>Jackpot:</Box> */}
+              <Box textAlign={'center'} color="good" bold>
+                Jackpot: ${formatMoney(data.money + data.jackpot)}
               </Box>
+              <Box textAlign={'center'} italic>
+                Wins only count from first reel
+              </Box>
+              {data.prizes.map((prize, i) => (
+                <Box key={i} textAlign={'center'}>
+                  {i + 3} of a kind: ${prize}
+                </Box>
+              ))}
+              <Box inline textAlign={'center'} color="good" bold>
+                5
+              </Box>
+              {/* CRIMSON EDIT CHANGE END - Slot machine */}
               {jackpotSymbol && (
                 <Box
                   className={classes([
@@ -95,6 +120,11 @@ export const SlotMachine = () => {
                   style={{ verticalAlign: 'middle' }}
                 />
               )}
+              {/* CRIMSON EDIT ADD START - Slot machine */}
+              <Box inline textAlign={'center'} color="good" bold>
+                in a line: Jackpot
+              </Box>
+              {/* CRIMSON EDIT ADD END - Slot machine */}
 
               {trapSymbol && (
                 <>
@@ -157,7 +187,7 @@ export const SlotMachine = () => {
 const getBannerPages = () => [
   BannerTitle,
   BannerOnlyFewCreds,
-  BannerPrizeMoney,
+  // BannerPrizeMoney, // CRIMSON EDIT REMOVAL - Slot machine
   BannerTitle,
   BannerJackpot,
   BannerStats,
@@ -343,10 +373,23 @@ type IconStripProps = {
   symbolsById: Record<string, SlotSymbol>;
   symbolsNeeded: string[];
   spinning?: boolean;
+  // CRIMSON EDIT ADD START - Slot machine
+  reelNumber: number;
+  winningLine: number[];
+  winningLength: number;
+  // CRIMSON EDIT ADD END - Slot machine
 };
 
 const IconStrip = (props: IconStripProps) => {
-  const { symbols, symbolsById, symbolsNeeded, spinning } = props;
+  const {
+    symbols,
+    symbolsById,
+    symbolsNeeded,
+    spinning,
+    reelNumber,
+    winningLine,
+    winningLength,
+  } = props; // CRIMSON EDIT CHANGE - Slot machine - ORIGINAL: const { symbols, symbolsById, symbolsNeeded, spinning } = props;
   const symbolIds = useMemo(() => symbols.map((s) => s.id), [symbols]);
 
   const [drawnSymbols, setDrawnSymbols] = useState<string[]>([
@@ -378,10 +421,35 @@ const IconStrip = (props: IconStripProps) => {
     >
       {drawnSymbols.map((symbolId, i) => {
         const symbol = symbolsById[symbolId];
+        // CRIMSON EDIT ADD START - Slot machine
+        const row = i - (drawnSymbols.length - 3) + 1;
+        const isWinningCell =
+          !spinning &&
+          reelNumber <= winningLength &&
+          winningLine[reelNumber - 1] === row;
+        // CRIMSON EDIT ADD END - Slot machine
         return (
-          <div key={i} className="SlotMachine__Symbol">
+          <div
+            key={i}
+            className={classes([
+              'SlotMachine__Symbol',
+              isWinningCell && 'SlotMachine__Symbol--winning',
+            ])}
+          >
+            {/* CRIMSON EDIT CHANGE - Slot machine - ORIGINAL: <div key={i} className="SlotMachine__Symbol"> */}
             {symbol && (
-              <Box className={classes(['slotmachines32x32', symbol.icon_id])} />
+              <Box
+                className={classes(['slotmachines32x32', symbol.icon_id])}
+                // CRIMSON EDIT ADD START - Slot machine
+                style={
+                  symbol.scale
+                    ? {
+                        transform: `scale(${symbol.scale}) translateY(${symbol.offset || 0}px)`,
+                      }
+                    : undefined
+                }
+                // CRIMSON EDIT ADD END - Slot machine
+              />
             )}
           </div>
         );
