@@ -13,27 +13,40 @@
 	processing_flags = NONE
 	money = 1500
 	symbol_paths = list(
-		/obj/item/stack/sheet/mineral/gold,
-		/obj/item/stack/sheet/mineral/diamond,
-		/obj/item/clothing/head/costume/crown,
-		/obj/item/food/grown/cherries,
-		/obj/item/food/grown/citrus/lemon,
-		/obj/item/food/grown/grapes,
-		/obj/item/food/watermelonslice,
+		/obj/item/stack/sheet/mineral/gold = 4,
+		/obj/item/stack/sheet/mineral/diamond = 4,
+		/obj/item/clothing/head/costume/crown/fancy = 10,
+		/obj/item/food/grown/cherries = 4,
+		/obj/item/food/grown/citrus/orange = 4,
+		/obj/item/food/grown/banana = 4,
+		/obj/item/food/watermelonslice = 4,
 	)
-	jackpot_path = /obj/item/stack/sheet/mineral/gold
+	jackpot_path = /obj/item/clothing/head/costume/crown/fancy
 	trap_path = null
 	var/datum/looping_sound/jackpot/jackpot_loop
+	var/list/winning_line = list()
+	var/winning_length = 0
+	var/static/list/paylines = list(
+		list(2, 2, 2, 2, 2),
+		list(1, 1, 1, 1, 1),
+		list(3, 3, 3, 3, 3),
+		list(1, 2, 3, 2, 1),
+		list(3, 2, 1, 2, 3),
+	)
+	var/static/list/symbol_scales = list(
+		/obj/item/stack/sheet/mineral/diamond = 4,
+		/obj/item/food/grown/cherries = 2.2,
+		/obj/item/food/grown/banana = 2,
+	)
+	var/static/list/symbol_offsets = list(
+		/obj/item/stack/sheet/mineral/diamond = -1.5,
+	)
 
 /obj/machinery/computer/slot_machine/darkpack/Initialize(mapload)
 	. = ..()
 	plays = 0
 	jackpots = 0
 	jackpot_loop = new(src, FALSE)
-
-/obj/machinery/computer/slot_machine/darkpack/Destroy()
-	QDEL_NULL(jackpot_loop)
-	return ..()
 
 /obj/machinery/computer/slot_machine/darkpack/make_machine_name()
 	return name
@@ -48,8 +61,6 @@
 		to_chat(user, span_notice("The machine appears to be off."))
 		return ITEM_INTERACT_BLOCKING
 	var/obj/item/stack/dollar/inserted_cash = inserted
-	if(!user.temporarilyRemoveItemFromInventory(inserted_cash))
-		return ITEM_INTERACT_BLOCKING
 	balloon_alert(user, "[inserted_cash.amount] [MONEY_NAME_AUTOPURAL(inserted_cash.amount)] inserted")
 	balance += inserted_cash.amount
 	qdel(inserted_cash)
@@ -65,21 +76,50 @@
 	playsound(src, 'sound/machines/buzz/buzz-two.ogg', 30, TRUE)
 	return FALSE
 
+/obj/machinery/computer/slot_machine/darkpack/ui_data(mob/user)
+	. = ..()
+	.["winning_line"] = winning_line
+	.["winning_length"] = winning_length
+
 /obj/machinery/computer/slot_machine/darkpack/ui_static_data(mob/user)
 	. = ..()
 	.["jackpot"] = PRIZE_JACKPOT
+	.["prizes"] = list(SPIN_PRICE * 2, PRIZE_SMALL, PRIZE_BIG)
 
 /obj/machinery/computer/slot_machine/darkpack/dispense(amount = 0, cointype = /obj/item/coin/silver, throwit = FALSE, mob/living/target)
-	if(amount > 0)
-		new /obj/item/stack/dollar(loc, amount)
+	new /obj/item/stack/dollar(loc, amount)
 	playsound(src, pick(list('sound/machines/coindrop.ogg', 'sound/machines/coindrop2.ogg')), 50, TRUE)
 	return amount
 
+/obj/machinery/computer/slot_machine/darkpack/build_symbol_data()
+	. = ..()
+	for(var/list/symbol in symbol_data)
+		var/symbol_path = text2path(symbol["id"])
+		symbol["scale"] = symbol_scales[symbol_path]
+		symbol["offset"] = symbol_offsets[symbol_path]
+
+/obj/machinery/computer/slot_machine/darkpack/randomize_reels()
+	for(var/list/reel in reels)
+		reel[1] = "[pick_weight(symbol_paths)]"
+		reel[2] = "[pick_weight(symbol_paths)]"
+		reel[3] = "[pick_weight(symbol_paths)]"
+
+/obj/machinery/computer/slot_machine/darkpack/proc/find_best_line()
+	winning_line = list()
+	winning_length = 0
+	for(var/list/payline in paylines)
+		var/line_length = 1
+		while(line_length < length(reels) && reels[line_length + 1][payline[line_length + 1]] == reels[1][payline[1]])
+			line_length++
+		if(line_length >= 3 && line_length > winning_length)
+			winning_line = payline
+			winning_length = line_length
+
 /obj/machinery/computer/slot_machine/darkpack/give_prizes(usrname, mob/living/user)
-	var/linelength = get_lines()
+	find_best_line()
 	var/did_player_win = TRUE
 
-	if(check_middle_row_all(jackpot_path))
+	if(winning_length == 5 && reels[1][winning_line[1]] == "[jackpot_path]")
 		winning = WINNING_JACKPOT
 		var/prize = money + PRIZE_JACKPOT
 		to_chat(user, span_notice("JACKPOT! You win [prize] [MONEY_NAME]!"))
@@ -92,21 +132,21 @@
 		money = 0
 		dispense(prize)
 
-	else if(linelength == 5)
+	else if(winning_length == 5)
 		winning = WINNING_BIG
 		to_chat(user, span_notice("Big Winner! You win [PRIZE_BIG] [MONEY_NAME]!"))
 		balloon_alert_to_viewers("Big Winner!", ignored_mobs = list(user))
 		give_money(PRIZE_BIG)
 		user.add_mood_event(SLOTS_MOOD_CATEGORY, /datum/mood_event/slots/win/big)
 
-	else if(linelength == 4)
+	else if(winning_length == 4)
 		winning = WINNING_SMALL
 		to_chat(user, span_notice("Winner! You win [PRIZE_SMALL] [MONEY_NAME]!"))
 		balloon_alert_to_viewers("Winner!", ignored_mobs = list(user))
 		give_money(PRIZE_SMALL)
 		user.add_mood_event(SLOTS_MOOD_CATEGORY, /datum/mood_event/slots/win)
 
-	else if(linelength == 3)
+	else if(winning_length == 3)
 		winning = WINNING_SMALL
 		to_chat(user, span_notice("Three in a row! You win [SPIN_PRICE * 2] [MONEY_NAME]!"))
 		balloon_alert_to_viewers("Three in a row!", ignored_mobs = list(user))
@@ -146,7 +186,7 @@
 			balloon_alert(user, "no cash in hand!")
 			return
 		var/amount = tgui_input_number(user, "Amount to deposit:", name, max_value = cash.amount, min_value = 1)
-		if(!amount || working || !user.can_perform_action(src) || !user.is_holding(cash))
+		if(!amount || working || !user.can_perform_action(src))
 			return
 		if(!cash.use(amount))
 			return
