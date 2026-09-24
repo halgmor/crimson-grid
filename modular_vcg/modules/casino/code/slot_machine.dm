@@ -1,6 +1,5 @@
 #define SPIN_PRICE 5
 #define WINNING_NOTHING 0
-#define WINNING_FREESPIN 1
 #define WINNING_SMALL 2
 #define WINNING_BIG 3
 #define WINNING_JACKPOT 4
@@ -108,7 +107,7 @@
 		user.add_mood_event(SLOTS_MOOD_CATEGORY, /datum/mood_event/slots/win)
 
 	else if(linelength == 3)
-		winning = WINNING_FREESPIN
+		winning = WINNING_SMALL
 		to_chat(user, span_notice("Three in a row! You win [SPIN_PRICE * 2] [MONEY_NAME]!"))
 		balloon_alert_to_viewers("Three in a row!", ignored_mobs = list(user))
 		balance += SPIN_PRICE * 2
@@ -166,7 +165,6 @@
 
 #undef SPIN_PRICE
 #undef WINNING_NOTHING
-#undef WINNING_FREESPIN
 #undef WINNING_SMALL
 #undef WINNING_BIG
 #undef WINNING_JACKPOT
