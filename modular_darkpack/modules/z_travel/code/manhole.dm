@@ -42,6 +42,18 @@
 	icon_state = "[base_icon_state]_closed"
 	. = ..()
 
+// CRIMSON EDIT ADD START - Adds existing hatch ladder sprites
+/obj/structure/ladder/manhole/down/hatch
+	name = "hatch"
+	icon_state = "hatch_closed"
+	base_icon_state = "hatch"
+
+/obj/structure/ladder/manhole/down/bunker
+	name = "bunker hatch"
+	icon_state = "bunker_closed"
+	base_icon_state = "bunker"
+// CRIMSON EDIT ADD END - Adds existing hatch ladder sprites
+
 
 /obj/structure/ladder/rope
 	icon_state = "rope"
